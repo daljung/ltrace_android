@@ -1,0 +1,188 @@
+trace.lo: trace.c ../../../config.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/string.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/sys/cdefs.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/sys/cdefs_elf.h \
+ /home/indal.choi/bin/android-ndk-r7/toolchains/arm-linux-androideabi-4.4.3/prebuilt/linux-x86/bin/../lib/gcc/arm-linux-androideabi/4.4.3/include/stddef.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/malloc.h \
+ /home/indal.choi/bin/android-ndk-r7/toolchains/arm-linux-androideabi-4.4.3/prebuilt/linux-x86/bin/../lib/gcc/arm-linux-androideabi/4.4.3/include-fixed/sys/types.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/stdint.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/sys/_types.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/machine/_types.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/linux/posix_types.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/linux/stddef.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/linux/compiler.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/asm/posix_types.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/asm/types.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/linux/types.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/machine/kernel.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/sys/sysmacros.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/sys/wait.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/sys/resource.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/linux/resource.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/linux/time.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/asm/resource.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/asm-generic/resource.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/linux/wait.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/signal.h \
+ /home/indal.choi/bin/android-ndk-r7/toolchains/arm-linux-androideabi-4.4.3/prebuilt/linux-x86/bin/../lib/gcc/arm-linux-androideabi/4.4.3/include-fixed/limits.h \
+ /home/indal.choi/bin/android-ndk-r7/toolchains/arm-linux-androideabi-4.4.3/prebuilt/linux-x86/bin/../lib/gcc/arm-linux-androideabi/4.4.3/include-fixed/syslimits.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/limits.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/sys/limits.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/linux/limits.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/machine/internal_types.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/machine/limits.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/sys/syslimits.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/asm/signal.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/asm-generic/signal.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/asm/siginfo.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/asm-generic/siginfo.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/sys/ptrace.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/linux/ptrace.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/asm/ptrace.h \
+ ../../../common.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/sys/time.h \
+ /home/indal.choi/bin/android-ndk-r7/toolchains/arm-linux-androideabi-4.4.3/prebuilt/linux-x86/bin/../lib/gcc/arm-linux-androideabi/4.4.3/include-fixed/stdio.h \
+ /home/indal.choi/bin/android-ndk-r7/toolchains/arm-linux-androideabi-4.4.3/prebuilt/linux-x86/bin/../lib/gcc/arm-linux-androideabi/4.4.3/include/stdarg.h \
+ ../../../ltrace.h ../../../defs.h ../../../dict.h \
+ ../../../sysdeps/sysdep.h arch.h ../../../debug.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/features.h \
+ ../../../ltrace-elf.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/gelf.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/libelf.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/elf.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/stdlib.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/alloca.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/strings.h \
+ /home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/memory.h \
+ ../../../read_config_file.h ../../../options.h ../../../output.h \
+ ../../../output.h ptrace.h
+
+../../../config.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/string.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/sys/cdefs.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/sys/cdefs_elf.h:
+
+/home/indal.choi/bin/android-ndk-r7/toolchains/arm-linux-androideabi-4.4.3/prebuilt/linux-x86/bin/../lib/gcc/arm-linux-androideabi/4.4.3/include/stddef.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/malloc.h:
+
+/home/indal.choi/bin/android-ndk-r7/toolchains/arm-linux-androideabi-4.4.3/prebuilt/linux-x86/bin/../lib/gcc/arm-linux-androideabi/4.4.3/include-fixed/sys/types.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/stdint.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/sys/_types.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/machine/_types.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/linux/posix_types.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/linux/stddef.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/linux/compiler.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/asm/posix_types.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/asm/types.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/linux/types.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/machine/kernel.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/sys/sysmacros.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/sys/wait.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/sys/resource.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/linux/resource.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/linux/time.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/asm/resource.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/asm-generic/resource.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/linux/wait.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/signal.h:
+
+/home/indal.choi/bin/android-ndk-r7/toolchains/arm-linux-androideabi-4.4.3/prebuilt/linux-x86/bin/../lib/gcc/arm-linux-androideabi/4.4.3/include-fixed/limits.h:
+
+/home/indal.choi/bin/android-ndk-r7/toolchains/arm-linux-androideabi-4.4.3/prebuilt/linux-x86/bin/../lib/gcc/arm-linux-androideabi/4.4.3/include-fixed/syslimits.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/limits.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/sys/limits.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/linux/limits.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/machine/internal_types.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/machine/limits.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/sys/syslimits.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/asm/signal.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/asm-generic/signal.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/asm/siginfo.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/asm-generic/siginfo.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/sys/ptrace.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/linux/ptrace.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/asm/ptrace.h:
+
+../../../common.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/sys/time.h:
+
+/home/indal.choi/bin/android-ndk-r7/toolchains/arm-linux-androideabi-4.4.3/prebuilt/linux-x86/bin/../lib/gcc/arm-linux-androideabi/4.4.3/include-fixed/stdio.h:
+
+/home/indal.choi/bin/android-ndk-r7/toolchains/arm-linux-androideabi-4.4.3/prebuilt/linux-x86/bin/../lib/gcc/arm-linux-androideabi/4.4.3/include/stdarg.h:
+
+../../../ltrace.h:
+
+../../../defs.h:
+
+../../../dict.h:
+
+../../../sysdeps/sysdep.h:
+
+arch.h:
+
+../../../debug.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/features.h:
+
+../../../ltrace-elf.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/gelf.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/libelf.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/elf.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/stdlib.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/alloca.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/strings.h:
+
+/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm/usr/include/memory.h:
+
+../../../read_config_file.h:
+
+../../../options.h:
+
+../../../output.h:
+
+../../../output.h:
+
+ptrace.h:
