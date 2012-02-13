@@ -168,10 +168,14 @@ do_init_elf(struct ltelf *lte, const char *filename) {
         }
         
         if(lte->fd == -1)
+        {
             fprintf(stderr, "Can't open \"%s\"\n", filename);
+            exit(1);
+        }
     }
 
-#ifdef HAVE_ELF_C_READ_MMAP
+//modify for android
+#if 0//def HAVE_ELF_C_READ_MMAP
 	lte->elf = elf_begin(lte->fd, ELF_C_READ_MMAP, NULL);
 #else
 	lte->elf = elf_begin(lte->fd, ELF_C_READ, NULL);
@@ -736,7 +740,7 @@ read_elf(Process *proc) {
     					addr = arch_plt_sym_val(plte, i, &rela);
     				}
 
-    				add_library_symbol(addr, name, &library_symbols, pltt,
+    				add_library_symbol(addr+(plte->base_addr), name, &library_symbols, pltt,
     						ELF64_ST_BIND(sym.st_info) == STB_WEAK);
     				if (!lib_tail)
     					lib_tail = &(library_symbols->next);

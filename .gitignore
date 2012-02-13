@@ -5,3 +5,5 @@
 *.deps*
 *.exp
 *si_prj*
+*ltrace.result.*
+*config.log

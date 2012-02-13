@@ -64,7 +64,9 @@ open_pid(pid_t pid) {
 
 	proc = open_program(filename, pid);
 	continue_process(pid);
-	proc->breakpoints_enabled = 1;
+    proc->breakpoints_enabled = 1;
+    //modify for android
+    attach_child_thread(proc);
 }
 
 Process *

@@ -9,7 +9,6 @@
 #endif
 
 #include "common.h"
-#include <dirent.h>
 
 /*****************************************************************************/
 
@@ -17,32 +16,6 @@ Breakpoint *
 address2bpstruct(Process *proc, void *addr) {
 	debug(DEBUG_FUNCTION, "address2bpstruct(pid=%d, addr=%p)", proc->pid, addr);
 	return dict_find_entry(proc->breakpoints, addr);
-}
-
-//modify for android
-void insert_breakpoint_in_child_thread(unsigned int pid, Breakpoint *sbp)
-{
-    char task_path[1024];
-
-    sprintf(task_path, "/proc/%d/task", pid);
-    DIR *d;
-    struct dirent *de;
-
-    d = opendir(task_path);
-    if (d == NULL) {
-        return;
-    }
-    while ((de = readdir(d)) != NULL) {
-        unsigned new_tid;
-        if (!strcmp(de->d_name, ".") || !strcmp(de->d_name, ".."))
-            continue;
-        new_tid = atoi(de->d_name);
-        if (new_tid == pid)
-            continue;
-
-        enable_breakpoint(new_tid, sbp);
-    }
-    closedir(d);
 }
 
 void
@@ -81,10 +54,7 @@ insert_breakpoint(Process *proc, void *addr,
 #endif
 	sbp->enabled++;
 	if (sbp->enabled == 1 && proc->pid)
-	{
 	    enable_breakpoint(proc->pid, sbp);
-        insert_breakpoint_in_child_thread(proc->pid, sbp);
-    }
 }
 
 void

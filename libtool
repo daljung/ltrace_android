@@ -161,7 +161,7 @@ lock_old_archive_extraction=no
 LTCC="/home/indal.choi/bin/android-ndk-r7/toolchains/arm-linux-androideabi-4.4.3/prebuilt/linux-x86/bin/arm-linux-androideabi-gcc"
 
 # LTCC compiler flags.
-LTCFLAGS="--sysroot=/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm -fvisibility=default"
+LTCFLAGS="-g --sysroot=/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm -fvisibility=default -D__WORDSIZE=32"
 
 # Take the output of nm and produce a listing of raw symbols and C names.
 global_symbol_pipe="sed -n -e 's/^.*[	 ]\\([ABCDGIRSTW][ABCDGIRSTW]*\\)[	 ][	 ]*\\([_A-Za-z][_A-Za-z0-9]*\\)\$/\\1 \\2 \\2/p' | sed '/ __gnu_lto/d'"

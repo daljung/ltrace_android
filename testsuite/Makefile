@@ -106,21 +106,21 @@ am__relativize = \
     dir1=`echo "$$dir1" | sed -e "$$sed_rest"`; \
   done; \
   reldir="$$dir2"
-ACLOCAL = ${SHELL} /home/indal.choi/android/ltrace/ltrace/config/autoconf/missing --run aclocal-1.11
-AMTAR = ${SHELL} /home/indal.choi/android/ltrace/ltrace/config/autoconf/missing --run tar
+ACLOCAL = ${SHELL} /home/indal.choi/android/git_prj/ltrace/config/autoconf/missing --run aclocal-1.11
+AMTAR = ${SHELL} /home/indal.choi/android/git_prj/ltrace/config/autoconf/missing --run tar
 AM_CFLAGS =  -Wall -Wsign-compare -Wfloat-equal -Wformat-security
 AM_CPPFLAGS =  	 	-I$(top_srcdir)/sysdeps/linux-gnu/arm 	-I$(top_srcdir)/sysdeps/linux-gnu 	-I$(top_srcdir)/sysdeps 	-I$(top_srcdir) 
 AM_LDFLAGS = 
 AR = /home/indal.choi/bin/android-ndk-r7/toolchains/arm-linux-androideabi-4.4.3/prebuilt/linux-x86/bin/arm-linux-androideabi-ar
-AUTOCONF = ${SHELL} /home/indal.choi/android/ltrace/ltrace/config/autoconf/missing --run autoconf
-AUTOHEADER = ${SHELL} /home/indal.choi/android/ltrace/ltrace/config/autoconf/missing --run autoheader
-AUTOMAKE = ${SHELL} /home/indal.choi/android/ltrace/ltrace/config/autoconf/missing --run automake-1.11
+AUTOCONF = ${SHELL} /home/indal.choi/android/git_prj/ltrace/config/autoconf/missing --run autoconf
+AUTOHEADER = ${SHELL} /home/indal.choi/android/git_prj/ltrace/config/autoconf/missing --run autoheader
+AUTOMAKE = ${SHELL} /home/indal.choi/android/git_prj/ltrace/config/autoconf/missing --run automake-1.11
 AWK = mawk
 CC = /home/indal.choi/bin/android-ndk-r7/toolchains/arm-linux-androideabi-4.4.3/prebuilt/linux-x86/bin/arm-linux-androideabi-gcc
 CCDEPMODE = depmode=gcc3
-CFLAGS = --sysroot=/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm -fvisibility=default
+CFLAGS = -g --sysroot=/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm -fvisibility=default -D__WORDSIZE=32
 CPP = /home/indal.choi/bin/android-ndk-r7/toolchains/arm-linux-androideabi-4.4.3/prebuilt/linux-x86/bin/arm-linux-androideabi-gcc -E
-CPPFLAGS = --sysroot=/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm -fvisibility=default
+CPPFLAGS = -g --sysroot=/home/indal.choi/bin/android-ndk-r7/platforms/android-9/arch-arm -fvisibility=default -D__WORDSIZE=32
 CYGPATH_W = echo
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
@@ -150,7 +150,7 @@ LIPO =
 LN_S = ln -s
 LTLIBOBJS = 
 MAINT = #
-MAKEINFO = ${SHELL} /home/indal.choi/android/ltrace/ltrace/config/autoconf/missing --run makeinfo
+MAKEINFO = ${SHELL} /home/indal.choi/android/git_prj/ltrace/config/autoconf/missing --run makeinfo
 MANIFEST_TOOL = :
 MKDIR_P = /bin/mkdir -p
 NM = nm
@@ -173,10 +173,10 @@ SET_MAKE =
 SHELL = /bin/bash
 STRIP = strip
 VERSION = 0.6.0
-abs_builddir = /home/indal.choi/android/ltrace/ltrace/testsuite
-abs_srcdir = /home/indal.choi/android/ltrace/ltrace/testsuite
-abs_top_builddir = /home/indal.choi/android/ltrace/ltrace
-abs_top_srcdir = /home/indal.choi/android/ltrace/ltrace
+abs_builddir = /home/indal.choi/android/git_prj/ltrace/testsuite
+abs_srcdir = /home/indal.choi/android/git_prj/ltrace/testsuite
+abs_top_builddir = /home/indal.choi/android/git_prj/ltrace
+abs_top_srcdir = /home/indal.choi/android/git_prj/ltrace
 ac_ct_AR = 
 ac_ct_CC = 
 ac_ct_DUMPBIN = link -dump
@@ -205,7 +205,7 @@ host_vendor = unknown
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/indal.choi/android/ltrace/ltrace/config/autoconf/install-sh
+install_sh = ${SHELL} /home/indal.choi/android/git_prj/ltrace/config/autoconf/install-sh
 libdir = ${exec_prefix}/lib
 libelf_LD_LIBRARY_PATH = 
 liberty_LIBS = 

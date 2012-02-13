@@ -17,8 +17,7 @@
 #define HAVE_DLFCN_H 1
 
 /* we have read mmap support */
-//modify code for android
-//#define HAVE_ELF_C_READ_MMAP 1
+#define HAVE_ELF_C_READ_MMAP 1
 
 /* Define to 1 if you have the <elf.h> header file. */
 #define HAVE_ELF_H 1

@@ -77,44 +77,83 @@ trace_me(void) {
 	}
 }
 
-int attach_child_thread(unsigned int pid)
-{
-    char task_path[1024];
+static void *
+address_thread(void * addr) {
+	debug(DEBUG_FUNCTION, "address_thread(%p)", addr);
+	return addr;
+}
 
-    sprintf(task_path, "/proc/%d/task", pid);
+static void *
+breakpoint_thread(void * bp) {
+	Breakpoint * b;
+	debug(DEBUG_FUNCTION, "breakpoint_thread(%p)", bp);
+	b = malloc(sizeof(Breakpoint));
+	if (!b) {
+		perror("malloc()");
+		exit(1);
+	}
+	memcpy(b, bp, sizeof(Breakpoint));
+	return b;
+}
+
+
+//modify for android
+void attach_child_thread(Process *proc){
+    char task_path[1024];
     DIR *d;
     struct dirent *de;
     int need_cleanup = 0;
+    unsigned int pid;
+
+    if(proc == NULL)
+        return;
+
+    pid = proc->pid;
+    
+    sprintf(task_path, "/proc/%d/task", pid);
 
     d = opendir(task_path);
     if (d == NULL) {
-        return 0;
+        return ;
     }
     while ((de = readdir(d)) != NULL) {
         unsigned new_tid;
+        Process *p;
         if (!strcmp(de->d_name, ".") || !strcmp(de->d_name, ".."))
             continue;
         new_tid = atoi(de->d_name);
         if (new_tid == pid)
             continue;
 
-        if (ptrace(PTRACE_ATTACH, new_tid, 1, 0) < 0)
+        if (ptrace(PTRACE_ATTACH, new_tid, 0, 0) < 0)
             continue;
 
+        debug(DEBUG_FUNCTION, "attach thread(tid=%d)", new_tid);
+    
+        p = malloc(sizeof(Process));
+
+        memcpy(p, proc, sizeof(Process));
+        p->breakpoints = dict_clone(proc->breakpoints, address_thread, breakpoint_thread);
+        p->pid = new_tid;
+        p->parent = proc;
+
+        p->state = STATE_ATTACHED;
+
         if (waitpid (new_tid, NULL, 0) != new_tid) {
-            fprintf (stderr, "trace_pid: waitpid %d\n", new_tid);
-        }else
-            printf("ok : waitpid for child thread\n");
-/*
+            fprintf(stderr, "trace_pid: waitpid tid = %d\n", new_tid);
+    	}
+
+        //ptrace(PTRACE_CONT, new_tid, 0, 0);
         continue_process(new_tid);
-*/
-//        ptrace(PTRACE_CONT, new_tid, 0, 0);
+
+        p->next = list_of_processes;
+
+        list_of_processes = p;
     }
     closedir(d);
 
-    return 1;
+    return ;
 }
-
 
 int
 trace_pid(pid_t pid) {
@@ -134,9 +173,6 @@ trace_pid(pid_t pid) {
 		exit (1);
 	}
     
-    //modify for android
-    attach_child_thread(pid);
-
 	return 0;
 }
 
